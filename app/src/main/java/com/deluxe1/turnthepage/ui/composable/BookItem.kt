@@ -22,7 +22,7 @@ fun BookItem(
     modifier: Modifier = Modifier
 ) {
     Row(modifier = modifier, verticalAlignment = Alignment.Top) {
-        Spacer(modifier = Modifier.width(15.dp))
+        Spacer(modifier = Modifier.width(4.dp))
         val thumbnail = book.volumeInfo?.imageLinks?.thumbnail?.replaceFirst("http:", "https:")
         Column(
             Modifier
@@ -30,7 +30,7 @@ fun BookItem(
                 .weight(0.2f),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(modifier = Modifier.padding(top = 30.dp))
+            Spacer(modifier = Modifier.padding(top = 8.dp))
             AsyncImage(
                 model = thumbnail,
                 contentDescription = book.volumeInfo?.title,
@@ -41,7 +41,7 @@ fun BookItem(
             Modifier
                 .fillMaxHeight()
                 .weight(0.8f)
-                .padding(30.dp)
+                .padding(8.dp)
         ) {
             Text(
                 text = book.volumeInfo?.title.orEmpty(),
